@@ -1,0 +1,132 @@
+
+body{
+	margin: 0;
+	min-height: 100vh;
+	background-image:url("../img/3.jpg'");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+
+	display: inline;
+	justify-content: center;
+
+}
+body:before{
+	content: "";
+	width: 100%;
+	min-height: 140vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	background: linear-gradient(90deg,#6D9454 ,#FF3737 );
+
+	opacity: 0.2;
+	z-index: -2;
+}
+@font-face{	
+	font-family: Big Designer;
+	src: url("fuentes/Big Designer.ttf");
+}
+
+#texto1{
+	margin-top: 2px;
+	color:  #7E5117;
+	font-family: new roman;
+	font-size: 50px;
+	text-align: center;
+	height: 40px;
+    font-weight: bold;
+}
+#texto2{
+	color: #FFFFFF ;
+	font-family: Big Designer;
+	font-size: 15px;
+	text-align: center;
+	
+
+}
+
+.clase1{
+	margin-left: 350px;
+	width: 50px;
+	height: 45px;
+	border-radius: 10px;
+	background-color: #F4FEFD ;
+	border-color:  #228B00 ;
+    padding: right;
+}
+.boton2{
+	margin-left: 25px;
+	width: 50px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: #F4FEFD ;
+	border-color: #228B00;
+    padding: right;
+}
+.lateral{	
+	position: relative;
+	margin-top: 4px;
+	background-color: #A97533 ;
+	border-color: #ffffff;
+	border-right: 3px;
+	border-style: solid; 	
+	border-radius: 10px;
+	width: 250px;
+	height: 450px;
+	float: left;
+    display: inline;
+}
+#lateral2{ 
+    border-style: solid;   
+	margin-top: 4px;
+	border-color: #ffffff;
+	margin-left: 1100px;
+	background-color: #A97533;
+	border-radius: 10px;
+	width: 250px;
+	height: 450px; 
+}
+#centro{
+	margin-top: 4px;
+	margin-left: 15px;
+	position: relative;
+	background-color: #524816;
+	opacity: 0.3;
+	border-radius: 5px;
+	width: 1334px;
+	height: 450px;
+}
+#totalCar{
+	margin-left: 13px;    
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 0px;
+    background-color: #F4FEFD ;
+	border-color: #228B00;
+	font-weight: bold;
+}
+
+.clase2{
+	display: inline;
+	padding: left;
+    margin-left: 13px;    
+    width: 400px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 10px;
+    background-color: #F4FEFD ;
+	border-color: #228B00;
+	font-weight: bold; 
+}
+.menu{
+	text-align: center;
+	color: #ffffff;
+	margin-top: 5px;
+}
+.opciones{
+	color: #ffffff;
+}

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <!-- TITULO  -->
+    <title>TIENDA VIRTUAL</title>
+
+    <!-- LOGO EN EL TITULO  -->
+    <link rel="icon" th:href="@{/img1/logo/loguito.png}">
+    
+    <!-- HOJAS DE ESTILO -->
+    <link rel="stylesheet" th:href="@{/user/css1/core-style1.css}">
+    <link rel="stylesheet" th:href="@{/u/css1/style.css}">
+
+</head>
+
+<body>
+    <!-- ##### HEADER ENCABEZADO ##### -->
+    <header class="header_area">
+        <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+            <!-- CLASE MENU DEL ENCABEZADO -->
+            <nav class="classy-navbar" id="essenceNav">
+                <!-- LOGO -->
+                <a class="nav-brand" href="principal.html"><img style="height: 80px; width: 100px;" th:src="@{/user/img1/logo/logo.png}"></a>
+                <div class="classy-navbar-toggler">
+                    <span class="navbarToggler"><span></span><span></span><span></span></span>
+                </div>
+                <!-- MENU -->
+                <div class="classy-menu">                    
+                    <div class="classycloseIcon">
+                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                    </div>
+                    <!-- NAV CATALOGO -->
+                    <div class="classynav">
+                        <ul>
+                        	<li><a href="principal.html">Principal</a></li>
+                            <li><a href="#">Catalogo</a>
+                                <div class="megamenu">
+                                    <ul class="single-mega cn-col-4">
+                                        <li class="title">CATEGORIA</li>
+                                        <li><a href="aseo.html">Aseo</a></li>
+                                        <li><a href="alacena.html">Alacena</a></li>
+                                        <li><a th:href="@{/cliente/carnicos}">Carnicos</a></li>
+                                        <li><a href="dulceria.html">Dulceria</a></li>
+                                        <li><a href="frutas_verduras.html">Frutas y verduras</a></li>
+                                        <li><a href="lacteos_derivados.html">Lacteos y derivados</a></li>
+                                        <li><a href="licores.html">Licores</a></li>
+                                        <li><a href="pasabocas.html">Pasabocas</a></li>
+                                    </ul>                                   
+                                </div>
+                            </li>         
+                            
+                            <li><a href="contactenos.html">Contactenos</a></li>
+
+                        </ul>
+                    </div>
+                    <!-- NAV FIN -->
+                </div>
+            </nav>
+
+            <!-- ENCABEZADO CARRITO Y LOGIN -->
+            <div class="header-meta d-flex clearfix justify-content-end">
+                <div class="user-login-info">
+                  <a href=""> Resgistrarse </a>
+                </div> 
+                <!-- LOGIN -->
+                <div class="user-login-info">
+                  <a href="index.html"> Login</a>  
+                </div >
+                <!-- CARRITO -->
+                <div class="user-login-info">
+                    <a href="#" id="essenceCartBtn"><img style="height: 30px; width: 80px;" th:src="@{/user/img1/fondo/carrito.png}" alt=""> <span>5</span></a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <!-- ##### FIN DE DEL AREA DEL HEADER ##### -->
+
+    <!-- ##### LOGICA DEL CARRITO ##### -->
+    <div class="cart-bg-overlay"></div>
+
+    <div class="right-side-cart-area">
+
+        <!-- LOGO DEL CARRITO -->
+        <div class="cart-button">
+            <a href="#" id="essenceCartBtn"><img style="height: 30px; width: 70px;" src="img/fondo/carrito.png" alt=""> <span>5</span></a>
+        </div>
+
+        <div class="cart-content d-flex">
+
+            <!-- LISTADO DE LOS PRODUCTOS -->
+            <div class="cart-list">
+                <!-- INFORMACION DEL PRODUCTO -->
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                        <img style="height: 250px;" src="img/productos/1.webp" class="cart-thumb" alt="">
+                        <!-- DESCRIPCION -->
+                        <div class="cart-item-desc">
+                          <span class="product-remove"><i class="fa fa-close" aria-hidden="false"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- INFORMACION DEL PRODUCTO -->
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                        <img style="height: 250px;" src="img/productos/2.webp" class="cart-thumb" alt="">
+                        <!-- DESCRIPCION -->
+                        <div class="cart-item-desc">
+                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- INFORMACION DEL PRODUCTO -->
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                        <img style="height: 250px;" src="img/productos/3.webp" class="cart-thumb" alt="">
+                        <!-- DESCRIPCION -->
+                        <div class="cart-item-desc">
+                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- INFORMACION DEL PRODUCTO -->
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                        <img style="height: 250px;" src="img/productos/4.jpg" class="cart-thumb" alt="">
+                        <!-- DESCRIPCION -->
+                        <div class="cart-item-desc">
+                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- INFORMACION DEL PRODUCTO -->  
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                        <img style="height: 250px;" src="img/productos/5.jpg" class="cart-thumb" alt="">
+                        <!-- DESCRIPCION -->
+                        <div class="cart-item-desc">
+                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- DATOS DEL PRODUCTO -->
+            <div class="cart-amount-summary">
+
+                <h2>RESUMEN</h2>
+                <ul class="summary-table">
+                    <li><span>SUBTOTAL:</span> <span>$274.00</span></li>
+                    <li><span>ENTREGA:</span> <span>GRATIS</span></li>
+                    <li><span>DESCUENTO:</span> <span>-15%</span></li>
+                    <li><span>TOTAL:</span> <span>$232.00</span></li>
+                </ul>
+                <div class="checkout-btn mt-100">
+                    <a href="hacer_pedido.html" class="btn essence-btn">HACER PEDIDO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### FIN LOGICA CARRITO ##### -->
+
+    <!-- ##### BIENVENIDO AL AREA PRINCIPAL ##### -->
+    <div class="breadcumb_area breadcumb-style-two bg-img" style="background-image: url(img/1.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="page-title text-center">
+                        <h2 style="color: #6B111A;">TIENDA VIRTUAL</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### FIN DEL AREA PRINCIPAL ##### -->
+
+    <!-- ##### AREA DE OFERTAS ##### -->
+    <section class="new_arrivals_area section-padding-80 clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <h1 style="color: #6B111A;">OFERTAS</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="popular-products-slides owl-carousel">
+
+                        <!-- ESPACIO DEL PRODUCTO -->
+                        <div class="single-product-wrapper">
+                            <!-- IMAGEN DEL PRODUCTO -->
+                            <div class="product-img">
+                                <img style="height: 200px; width: 250px; border-radius: 20px;" src="img/promocion/1.jpg" alt="">
+                                <img class="hover-img" style="opacity: 0.9; height: 200px; width: 250px; border-radius: 20px;" th:src="@{/user/img1/fondo/3.jpg}" alt="">
+                            </div>
+                            <!-- DESCRPCION DEL PRODUCTO -->
+                            <div class="product-description">
+                                <span>MARCA</span>
+                                <a href="single-product-details.html">
+                                    <h6>DESCRIPCION</h6>
+                                </a>
+                                <p class="product-price">$80.00</p>
+
+                                <!-- LOGICA PARA AGREGAR AL CARRITO -->
+                                <div class="hover-content">
+                                    <!-- ENLACE PARA AGREGAR AL CARRITO -->
+                                    <div class="add-to-cart-btn">
+                                        <a href="#" class="btn essence-btn">Agregar al carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ESPACIO DEL PRODUCTO -->
+                        <div class="single-product-wrapper">
+                            <!-- IMAGEN DEL PRODUCTO -->
+                             <div class="product-img">
+                                <img style="height: 200px; width: 250px; border-radius: 20px;" src="img/promocion/2.jpg" alt="">
+                                <img class="hover-img" style="opacity: 0.9; height: 200px; width: 250px; border-radius: 20px;" src="img/fondo/3.jpg" alt="">
+                            </div>
+                            <!-- DESCRPCION DEL PRODUCTO -->
+                            <div class="product-description">
+                                <span>MARCA</span>
+                                <a href="single-product-details.html">
+                                    <h6>DESCRIPCION</h6>
+                                </a>
+                                <p class="product-price">$80.00</p>
+
+                                <!-- LOGICA PARA AGREGAR AL CARRITO -->
+                                <div class="hover-content">
+                                    <!-- ENLACE PARA AGREGAR AL CARRITO -->
+                                    <div class="add-to-cart-btn">
+                                        <a href="#" class="btn essence-btn">Agregar al carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ESPACIO DEL PRODUCTO -->
+                        <div class="single-product-wrapper">
+                            <!-- IMAGEN DEL PRODUCTO -->
+                             <div class="product-img">
+                                <img style="height: 200px; width: 250px; border-radius: 20px;" src="img/promocion/3.jpg" alt="">
+                                <img class="hover-img" style="opacity: 0.9; height: 200px; width: 250px; border-radius: 20px;" src="img/fondo/3.jpg" alt="">
+                            </div>
+                            <!-- DESCRPCION DEL PRODUCTO -->
+                            <div class="product-description">
+                                <span>MARCA</span>
+                                <a href="single-product-details.html">
+                                    <h6>DESCRIPCION</h6>
+                                </a>
+                                <p class="product-price"><span class="old-price">$75.00</span> $55.00</p>
+
+                                <!-- LOGICA PARA AGREGAR AL CARRITO -->
+                                <div class="hover-content">
+                                    <!-- ENLACE PARA AGREGAR AL CARRITO -->
+                                    <div class="add-to-cart-btn">
+                                        <a href="#" class="btn essence-btn">Agregar al carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ESPACIO DEL PRODUCTO -->
+                        <div class="single-product-wrapper">
+                            <!-- IMAGEN DEL PRODUCTO -->
+                             <div class="product-img">
+                                <img style="height: 200px; width: 250px; border-radius: 20px;" src="img/promocion/4.jpg" alt="">
+                                <img class="hover-img" style="opacity: 0.9; height: 200px; width: 250px; border-radius: 20px;" src="img/fondo/3.jpg" alt="">
+                            </div>
+                            <!-- DESCRPCION DEL PRODUCTO -->
+                            <div class="product-description">
+                                <span>MARCA</span>
+                                <a href="single-product-details.html">
+                                    <h6>DESCRIPCION</h6>
+                                </a>
+                                <p class="product-price">$80.00</p>
+
+                                <!-- LOGICA PARA AGREGAR AL CARRITO -->
+                                <div class="hover-content">
+                                    <!-- ENLACE PARA AGREGAR AL CARRITO -->
+                                    <div class="add-to-cart-btn">
+                                        <a href="#" class="btn essence-btn">Agregar al carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ENLACE PARA GESTION DE PQRS -->
+    <div>
+        <CENTER><a style="width: 500px; border-radius: 10px;" href="#" class="btn essence-btn">ENVIO DE PQRS</a>  </CENTER><br><br><br> 
+    </div>
+    
+    <!-- PIE DE PAGINA -->
+    <footer class="footer_area clearfix" style="background-color: #6B111A;">
+        <div class="container" >
+            <div class="row">
+                <!-- UBICACION DE LA INFORMACION -->
+                <div class="col-12 col-md-6">
+                    <div class="single_widget_area d-flex mb-30">
+                        <!-- LOGO -->
+                        <div class="footer-logo mr-50">
+                            <a class="nav-brand" href="principal.html" ><h2 style=" color: #ffffff;">MARKETIME</h2></a>
+                        </div>
+                        <!-- ENLACE CON LOGICA DEL MENU -->
+                        <div class="footer_menu">
+                            <ul>
+                                <li><a href="aseo.html">Catalogo</a></li>                              
+                                <li><a href="contact.html">Contactenos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- INFORMACION DE PILITICAS DE LA ORGANIZACION -->
+                <div class="col-12 col-md-6">
+                    <div class="single_widget_area mb-30">
+                        <ul class="footer_widget_menu">
+                            <li><a href="#">Estado del pedido</a></li>
+                            <li><a href="#">Envio y entrega</a></li>
+                            <li><a href="#">Politica de privacidad</a></li>
+                            <li><a href="#">Opciones de pago</a></li>
+                            <li><a href="#">Guias</a></li>
+                            <li><a href="#">Terminos de uso</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+          
+                <!-- ENLACE CON REDES SOCILES -->
+                <div class="col-12 col-md-6">
+                    <div class="single_widget_area">
+                        <div class="footer_social_area">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </footer>
+    <!-- ##### FIN DEL PIE DE PAGINA ##### -->
+
+    <!-- AGREGAR UN jQuery  -->
+    <script th:src="@{/user/js/jquery/jquery-2.2.4.min.js}"></script>
+    <!-- AGREGAR UN Popper js -->
+    <script th:src="@{/user/js/popper.min.js}"></script>
+    <!-- AGREGAR EL Bootstrap js -->
+    <script th:src="@{/user/js/bootstrap.min.js}"></script>
+    <!-- AGREGAR UN Plugins js -->
+    <script th:src="@{user/js/plugins.js}"></script>
+    <!-- AGREGAR ESTILO Classy Nav js -->
+    <script th:src="@{/user/js/classy-nav.min.js}"></script>
+    <!-- AGREGAR EL Active js -->
+    <script th:src="@{user/js/active.js}"></script>
+
+</body>
+
+</html>

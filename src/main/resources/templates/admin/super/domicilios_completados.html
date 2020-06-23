@@ -1,0 +1,471 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>MERKATIME</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- LOGO EN EL TITULO  -->
+    <link rel="icon" href="images/logo.png">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
+
+   <style>
+    #weatherWidget .currentDesc {
+        color: #ffffff!important;
+    }
+        .traffic-chart {
+            min-height: 335px;
+        }
+        #flotPie1  {
+            height: 150px;
+        }
+        #flotPie1 td {
+            padding:3px;
+        }
+        #flotPie1 table {
+            top: 20px!important;
+            right: -10px!important;
+        }
+        .chart-container {
+            display: table;
+            min-width: 270px ;
+            text-align: left;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        #flotLine5  {
+             height: 105px;
+        }
+
+        #flotBarChart {
+            height: 150px;
+        }
+        #cellPaiChart{
+            height: 160px;
+        }
+
+    </style>
+</head>
+
+<body >
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="principal.html"><i class="menu-icon fa fa-home"></i>Inicio </a>
+                    </li>
+                    <li class="menu-title" style="color: #6B111A">Empleados</li><!-- /.menu-title -->
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-male"></i>Gestionar Empleados</a>
+                        <ul class="sub-menu children dropdown-menu">                    
+                            <li><i class="ti-control-record" ></i><a href="agregar_empleados.html">Agregar Empleados</a></li>
+                            <li><i class="ti-control-record"></i><a href="eliminar_empleados.html">Eliminar Empleados</a></li>
+                            <li><i class="ti-control-record"></i><a href="modificar_empleados.html">Modificar Empleados</a></li>
+                        </ul>
+                    </li>                   
+
+                    <li class="menu-title" style="color: #6B111A">Productos</li><!-- /.menu-title -->
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-archive"></i>Gestionar Productos</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="ti-control-record" ></i><a href="agregar_productos.html">Agregar Productos</a></li>
+                            <li><i class="ti-control-record"></i><a href="eliminar_productos.html">Eliminar Productos</a></li>
+                            <li><i class="ti-control-record"></i><a href="modificar_productos.html">Modificar Productos</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-title" style="color: #6B111A">Domicilios</li><!-- /.menu-title -->
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-truck"></i>Gestionar domicilios</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="ti-control-record" ></i><a href="domicilios_en_espera.html">Domicilios en espera</a></li>
+                            <li><i class="ti-control-record"></i><a href="domicilios_completados.html">Domicilios completados</a></li>
+                            <li><i class="ti-control-record"></i><a href="historial_domicilio_cliente.html">Historial de domicilios por cliente</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-title" style="color: #6B111A">Reportes</li><!-- /.menu-title -->
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-file"></i>Gestionar Reportes</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="ti-control-record" ></i><a href="#">Descargar reportes</a></li>                       
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside>
+    <!-- /#left-panel -->
+    <!-- Right Panel -->
+    <div id="right-panel" class="right-panel">
+        <!-- Header-->
+        <header id="header" class="header">
+            <div class="top-left">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo"></a>                 
+                    <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="header-menu">
+                    <div class="header-left">   
+                        <div class="dropdown for-message">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="message" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i style="font: normal normal normal 14px/3 FontAwesome;" class="fa fa-envelope"></i>
+                                <span class="count bg-primary">4</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="message">
+                                <p class="red">Mensajes </p>
+                                <a class="dropdown-item media" href="#">
+                                    <span class="photo media-left"><img alt="avatar" src="images/avatar/1.jpg"></span>
+                                    <div class="message media-body">
+                                        <span class="name float-left">Nombre</span>
+                                        <span class="time float-right">Tiempo</span>
+                                        <p>mensaje</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item media" href="#">
+                                    <span class="photo media-left"><img alt="avatar" src="images/avatar/2.jpg"></span>
+                                    <div class="message media-body">
+                                        <span class="name float-left">Nombre</span>
+                                        <span class="time float-right">Tiempo</span>
+                                        <p>mensaje</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item media" href="#">
+                                    <span class="photo media-left"><img alt="avatar" src="images/avatar/3.jpg"></span>
+                                    <div class="message media-body">
+                                        <span class="name float-left">Nombre</span>
+                                        <span class="time float-right">Tiempo</span>
+                                        <p>mensaje</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item media" href="#">
+                                    <span class="photo media-left"><img alt="avatar" src="images/avatar/4.jpg"></span>
+                                    <div class="message media-body">
+                                        <span class="name float-left">Nombre</span>
+                                        <span class="time float-right">Tiempo</span>
+                                        <p>mensaje</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="#"><i class="fa fa- user"></i>Mi Perfil</a>
+                            <a class="nav-link" href="#"><i class="fa fa-power -off"></i>Cerrar sesion</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header> 
+
+        <div class="breadcrumbs" >
+            <div class="breadcrumbs-inner" style="background-color: #6B111A">
+                <div class="row m-0" >
+                    <div class="col-sm-4" >
+                        <div class="page-header float-left" style="background-color: #6B111A">
+                            <div class="page-title" style="background-color: #6B111A">
+                                <h1 style="color: #FFFFFF">DOMICILIOS COMPLETADOS</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="breadcrumbs">
+            <div class="table-stats order-table ov-h">
+                                        <table class="table ">
+                                            <thead>
+                                                <tr>
+                                                    <th class="serial">#</th>
+                                                    <th class="avatar">Fecha</th>
+                                                    <th>Hora</th>
+                                                    <th>Cliente</th>
+                                                    <th>Despachador</th>
+                                                    <th>Conductor</th>
+                                                    <th>Monto</th>
+                                                    <th>Calificacion</th>
+                                                </tr> 
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="serial">1.</td>
+                                                    <td>21/5/20</td>                                                    
+                                                    <td> 5:30 pm</td>
+                                                    <td> 
+                                                        <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#scrollmodal1">
+                                                                Visualizar
+                                                         </button>
+                                                    </td>
+                                                    <td> 
+                                                        <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#scrollmodal2">
+                                                                Visualizar
+                                                         </button>
+                                                    </td>
+                                                    <td> 
+                                                        <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#scrollmodal3">
+                                                                Visualizar
+                                                         </button>
+                                                    </td>                                                    
+                                                    <td>$<span class="count">20000</span></td>
+                                                    <td>5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="serial">2.</td>
+                                                    <td>21/5/20</td>                                                    
+                                                    <td> 5:30 pm</td>
+                                                    <td> 
+                                                        <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#scrollmodal1">
+                                                                Visualizar
+                                                         </button>
+                                                    </td>
+                                                    <td> 
+                                                        <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#scrollmodal2">
+                                                                Visualizar
+                                                         </button>
+                                                    </td>
+                                                    <td> 
+                                                        <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#scrollmodal3">
+                                                                Visualizar
+                                                         </button>
+                                                    </td>                                                    
+                                                    <td>$<span class="count">20000</span></td>
+                                                    <td>5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="serial">3.</td>
+                                                    <td>21/5/20</td>                                                    
+                                                    <td> 5:30 pm</td>
+                                                    <td> 
+                                                        <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#scrollmodal1">
+                                                                Visualizar
+                                                         </button>
+                                                    </td>
+                                                    <td> 
+                                                        <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#scrollmodal2">
+                                                                Visualizar
+                                                         </button>
+                                                    </td>
+                                                    <td> 
+                                                        <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#scrollmodal3">
+                                                                Visualizar
+                                                         </button>
+                                                    </td>                                                    
+                                                    <td>$<span class="count">20000</span></td>
+                                                    <td>5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="serial">4.</td>
+                                                    <td>21/5/20</td>                                                    
+                                                    <td> 5:30 pm</td>
+                                                    <td> 
+                                                        <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#scrollmodal1">
+                                                                Visualizar
+                                                         </button>
+                                                    </td>
+                                                    <td> 
+                                                        <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#scrollmodal2">
+                                                                Visualizar
+                                                         </button>
+                                                    </td>
+                                                    <td> 
+                                                        <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#scrollmodal3">
+                                                                Visualizar
+                                                         </button>
+                                                    </td>                                                    
+                                                    <td>$<span class="count">20000</span></td>
+                                                    <td>5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="serial">5.</td>
+                                                    <td>21/5/20</td>                                                    
+                                                    <td> 5:30 pm</td>
+                                                    <td> 
+                                                        <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#scrollmodal1">
+                                                                Visualizar
+                                                         </button>
+                                                    </td>
+                                                    <td> 
+                                                        <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#scrollmodal2">
+                                                                Visualizar
+                                                         </button>
+                                                    </td>
+                                                    <td> 
+                                                        <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#scrollmodal3">
+                                                                Visualizar
+                                                         </button>
+                                                    </td>                                                    
+                                                    <td>$<span class="count">20000</span></td>
+                                                    <td>5</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+        </div>        
+
+        <div class="modal fade" id="scrollmodal1" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="mediumModalLabel">Datos del cliente</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div><center>
+                        <div class="modal-body">
+                            <div class="col-md-4">
+                                <aside class="profile-nav alt">
+                                    <section class="card">
+                                        <div class="card-header user-header alt bg-dark">
+                                            <div class="media">
+                                                <a href="#">
+                                                    <img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt="" src="images/admin.jpg">
+                                                </a>
+                                                <div class="media-body">
+                                                    <h2 class="text-light display-6">Carlos soto</h2>
+                                                    <p>Conductor</p>
+                                                </div>
+
+                                            </div>
+                                        </div>                                
+                                    </section>
+                                </aside>
+                            </div>
+                        </div></center>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="scrollmodal2" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="mediumModalLabel">Datos del despachador</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div><center>
+                        <div class="modal-body">
+                            <div class="col-md-4">
+                                <aside class="profile-nav alt">
+                                    <section class="card">
+                                        <div class="card-header user-header alt bg-dark">
+                                            <div class="media">
+                                                <a href="#">
+                                                    <img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt="" src="images/admin.jpg">
+                                                </a>
+                                                <div class="media-body">
+                                                    <h2 class="text-light display-6">Carlos soto</h2>
+                                                    <p>Conductor</p>
+                                                </div>
+
+                                            </div>
+                                        </div>                                
+                                    </section>
+                                </aside>
+                            </div>
+                        </div></center>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="scrollmodal3" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="mediumModalLabel">Datos del conductor</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div><center>
+                        <div class="modal-body">
+                            <div class="col-md-4">
+                                <aside class="profile-nav alt">
+                                    <section class="card">
+                                        <div class="card-header user-header alt bg-dark">
+                                            <div class="media">
+                                                <a href="#">
+                                                    <img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt="" src="images/admin.jpg">
+                                                </a>
+                                                <div class="media-body">
+                                                    <h2 class="text-light display-6">Carlos soto</h2>
+                                                    <p>Conductor</p>
+                                                </div>
+
+                                            </div>
+                                        </div>                                
+                                    </section>
+                                </aside>
+                            </div>
+                        </div></center>
+                        <div class="modal-footer">                        
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!--  Chart js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.bundle.min.js"></script>
+
+    <!--Chartist Chart-->
+    <script src="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartist-plugin-legend@0.6.2/chartist-plugin-legend.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery.flot@0.8.3/jquery.flot.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flot-pie@1.0.0/src/jquery.flot.pie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flot-spline@0.0.1/js/jquery.flot.spline.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/simpleweather@3.1.0/jquery.simpleWeather.min.js"></script>
+    <script src="assets/js/init/weather-init.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
+    <script src="assets/js/init/fullcalendar-init.js"></script>
+
+    <!--Local Stuff-->
+    
+</body>
+</html>

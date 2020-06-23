@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <!-- TITULO  -->
+    <title>REGISTRO</title>
+
+    <!-- LOGO EN EL TITULO  -->
+    <link rel="icon" href="img/logo/logo.png">
+    
+    <!-- HOJAS DE ESTILO -->
+    <link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+    <div class="login-box" style="width: 700px; height: 940px; ">
+
+      <h1>NUEVO REGISTRO</h1>
+      <form>
+        <!-- INPUT DE NOMBRES -->
+        <label for="nombre">Nombres</label>
+        <input type="text" name="nombres" placeholder="Ingrese sus nombres">
+        <!-- INPUT DE APELLIDOS -->
+        <label for="apellido">Apellidos</label>
+        <input type="text" name="apellidos" placeholder="Ingrese sus apellidos">
+        <!-- OPCIONES DE TIPO DE DOCUMENTO -->        
+        <label for="apellido">Tipo de documento </label>
+        <select name="tipo_documento" style="height: 45px; width: 640px;border-radius: 20px;">
+        	<option value="cedula_c">Cedula de Ciudadania</option>
+        	<option value="cedula_E">Cedula de Extranjeria</option>
+        	<option value="targeta_i">Targeta de Identidad</option>
+        	<option value="Pasaporte">Pasaporte</option>
+        </select><br>
+        <!-- INPUT DE NUMERO DE DOCUMENTO -->
+        <label for="numero_d">Documento</label>
+        <input type="text" name="numero_D" placeholder="Ingrese su N. de documneto">
+        <!-- INPUT DE NUMERO DE TELEFONO -->
+        <label for="telefono">Telefono</label>
+        <input type="text" name="telefono" placeholder="Ingrese su N. de telefono">
+        <!-- INPUT DE DIRECCION -->
+        <label for="direccion">Direccion</label>
+        <input type="text" name="direccion" placeholder="Ingrese la direccion">
+        <!-- INPUT DE Correo -->
+        <label for="correo">Correo electronico</label>
+        <input type="text" name="correo" placeholder="Ingrese la direccion de correo electronico">
+        <!-- INPUT DE CONTRASEÑA -->
+        <label for="password">Contraseña</label>
+        <input type="password" placeholder="Ingrese Contraseña" ><br>
+        <!-- INPUT DE CONFIRMACION DE CONTRASEÑA -->
+        <label for="password">Confirmar Contraseña</label>
+        <input type="password" placeholder="Ingrese nuevamente la Contraseña" ><br>
+
+        <input type="submit" value="REGISTRARSE">
+
+        <a href="index.html">Volver a Login</a><br>
+        <a href="principal.html">Ir a pagina principal</a><br>
+        
+      </form>
+    </div>
+</body>
+</html>

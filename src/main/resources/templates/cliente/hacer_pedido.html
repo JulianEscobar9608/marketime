@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <!-- TITULO  -->
+    <title>GESTION DE PEDIDO</title>
+
+    <!-- LOGO EN EL TITULO  -->
+    <link rel="icon" href="img/logo/logo.png">
+    
+    <!-- HOJAS DE ESTILO -->
+    <link rel="stylesheet" href="css/core-style.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- ##### HEADER ENCABEZADO ##### -->
+    <header class="header_area">
+        <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+            <!-- CLASE MENU DEL ENCABEZADO -->
+            <nav class="classy-navbar" id="essenceNav">
+                <!-- LOGO -->
+                <a class="nav-brand" href="index.html"><img style="height: 80px; width: 100px;" src="img/logo/logo.png"></a>
+                <div class="classy-navbar-toggler">
+                    <span class="navbarToggler"><span></span><span></span><span></span></span>
+                </div>
+                <!-- MENU -->
+                <div class="classy-menu">                    
+                    <div class="classycloseIcon">
+                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                    </div>
+                    <!-- NAV CATALOGO -->
+                    <div class="classynav">
+                        <ul>
+                            <li><a href="index.html">Principal</a></li>
+                            <li><a href="#">Catalogo</a>
+                                <div class="megamenu">
+                                    <ul class="single-mega cn-col-4">
+                                        <li class="title">CATEGORIA</li>
+                                        <li><a href="aseo.html">Aseo</a></li>
+                                        <li><a href="alacena.html">Alacena</a></li>
+                                        <li><a href="carnicos.html">Carnicos</a></li>
+                                        <li><a href="dulceria.html">Dulceria</a></li>
+                                        <li><a href="frutas_verduras.html">Frutas y verduras</a></li>
+                                        <li><a href="lacteos_derivados.html">Lacteos y derivados</a></li>
+                                        <li><a href="licores.html">Licores</a></li>
+                                        <li><a href="pasabocas.html">Pasabocas</a></li>
+                                    </ul>                                   
+                                </div>
+                            </li>         
+                            
+                            <li><a href="contactenos.html">Contactenos</a></li>
+
+                        </ul>
+                    </div>
+                    <!-- NAV FIN -->
+                </div>
+            </nav>
+
+            <!-- ENCABEZADO CARRITO Y LOGIN -->
+            <div class="header-meta d-flex clearfix justify-content-end">
+                <div class="user-login-info">
+                  <a href=""> Resgistrarse </a>
+                </div> 
+                <!-- LOGIN -->
+                <div class="user-login-info">
+                  <a href=""> Login</a>  
+                </div >
+                <!-- CARRITO -->
+                <div class="user-login-info">
+                    <a href="#" id="essenceCartBtn"><img style="height: 30px; width: 80px;" src="img/fondo/carrito.png" alt=""> <span>5</span></a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <!-- ##### FIN DE DEL AREA DEL HEADER ##### -->
+
+    <!-- ##### LOGICA DEL CARRITO ##### -->
+    <div class="cart-bg-overlay"></div>
+
+    <div class="right-side-cart-area">
+
+        <!-- LOGO DEL CARRITO -->
+        <div class="cart-button">
+            <a href="#" id="essenceCartBtn"><img style="height: 30px; width: 70px;" src="img/fondo/carrito.png" alt=""> <span>5</span></a>
+        </div>
+
+        <div class="cart-content d-flex">
+
+            <!-- LISTADO DE LOS PRODUCTOS -->
+            <div class="cart-list">
+                <!-- INFORMACION DEL PRODUCTO -->
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                        <img style="height: 250px;" src="img/productos/1.webp" class="cart-thumb" alt="">
+                        <!-- DESCRIPCION -->
+                        <div class="cart-item-desc">
+                          <span class="product-remove"><i class="fa fa-close" aria-hidden="false"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- INFORMACION DEL PRODUCTO -->
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                        <img style="height: 250px;" src="img/productos/2.webp" class="cart-thumb" alt="">
+                        <!-- DESCRIPCION -->
+                        <div class="cart-item-desc">
+                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- INFORMACION DEL PRODUCTO -->
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                        <img style="height: 250px;" src="img/productos/3.webp" class="cart-thumb" alt="">
+                        <!-- DESCRIPCION -->
+                        <div class="cart-item-desc">
+                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- INFORMACION DEL PRODUCTO -->
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                        <img style="height: 250px;" src="img/productos/4.jpg" class="cart-thumb" alt="">
+                        <!-- DESCRIPCION -->
+                        <div class="cart-item-desc">
+                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- INFORMACION DEL PRODUCTO -->  
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                        <img style="height: 250px;" src="img/productos/5.jpg" class="cart-thumb" alt="">
+                        <!-- DESCRIPCION -->
+                        <div class="cart-item-desc">
+                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- DATOS DEL PRODUCTO -->
+            <div class="cart-amount-summary">
+
+                <h2>RESUMEN</h2>
+                <ul class="summary-table">
+                    <li><span>SUBTOTAL:</span> <span>$274.00</span></li>
+                    <li><span>ENTREGA:</span> <span>GRATIS</span></li>
+                    <li><span>DESCUENTO:</span> <span>-15%</span></li>
+                    <li><span>TOTAL:</span> <span>$232.00</span></li>
+                </ul>
+                <div class="checkout-btn mt-100">
+                    <a href="hacer_pedido.html" class="btn essence-btn">HACER PEDIDO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### FIN LOGICA CARRITO ##### -->
+
+
+    <!-- ##### AREA DE TITULO ##### -->
+    <div class="breadcumb_area bg-img" style="background-image: url(img/bg-img/breadcumb.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="page-title text-center">
+                        <h2>GESTION DEL PEDIDO</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### FIN TITULO ##### -->
+
+    <!-- ##### FORMULARIO DE GESTION DE PEDIDO ##### -->
+    <div class="checkout_area section-padding-80">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-md-6">
+                    <div class="checkout_details_area mt-50 clearfix">
+
+                        <div class="cart-page-heading mb-30">
+                            <h5>Direccion de envio</h5>
+                        </div>
+
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="first_name">Nombres<span>*</span></label>
+                                    <input type="text" class="form-control" id="first_name" value="" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="last_name">Apellidos<span>*</span></label>
+                                    <input type="text" class="form-control" id="last_name" value="" required>
+                                </div>                             
+                               
+                                <div class="col-12 mb-3">
+                                    <label for="street_address">Direccion <span>*</span></label>
+                                    <input type="text" class="form-control mb-3" id="street_address" value="">
+                                    <input type="text" class="form-control" id="street_address2" value="">
+                                </div>                               
+                                <div class="col-12 mb-3">
+                                    <label for="city">Pueblo/Ciudad <span>*</span></label>
+                                    <input type="text" class="form-control" id="city" value="">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="state">Departamento<span>*</span></label>
+                                    <input type="text" class="form-control" id="state" value="">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="phone_number">Telefono<span>*</span></label>
+                                    <input type="number" class="form-control" id="phone_number" min="0" value="">
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <label for="email_address">E-mail<span>*</span></label>
+                                    <input type="email" class="form-control" id="email_address" value="">
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="custom-control custom-checkbox d-block mb-2">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Terminos y Condiciones</label>
+                                    </div>                                 
+                                    
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-5 ml-lg-auto">
+                    <div class="order-details-confirmation">
+                
+                <!-- ##### DETALLES DE FACTURA ##### -->
+                        <div class="cart-page-heading">
+                            <h5>FACTURA</h5>
+                            <p>Detalles de factura</p>
+                        </div>
+
+                        <ul class="order-details-form mb-4">
+                            <li><span>Lista de productos</span> <span>Valor</span></li>
+                            <li><span>Arroz</span> <span>$23.000</span></li>
+                            <li><span>Aceite</span> <span>$15.000</span></li>
+                            <li><span>chocolate</span> <span>$9.000</span></li>
+                            <li><span>jabon</span> <span>$5.000</span></li>
+                            <li><span>Azucar</span> <span>$23.000</span></li>
+                            <li><span>Subtotal</span> <span>$80.900</span></li>
+                            <li><span>Envio</span> <span>$2.000</span></li>
+                            <li><span>Total</span> <span>$100.900</span></li>
+                        </ul>
+
+
+                    <!-- ##### OPCIONES DE PAGO ##### -->
+                        <div id="accordion" role="tablist" class="mb-4">
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingOne">
+                                    <h6 class="mb-0">
+                                        <a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><i class="fa fa-circle-o mr-3"></i>TARGETA DE CREDITO</a>
+                                    </h6>
+                                </div>
+
+                                <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Recuerde que al elegir esta opcion deve cumplir con las normas y condiciones reglementales de la politica de la organizacion propone.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingTwo">
+                                    <h6 class="mb-0">
+                                        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fa fa-circle-o mr-3"></i>EFECTIVO CONTRA ENTREGA</a>
+                                    </h6>
+                                </div>
+                                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Recuerde que si no cumple con las condiciones del servicio prestado sera bloquiado su perfil permanentemente.</p>
+                                    </div>
+                                </div>
+                            </div>                           
+                            
+                        </div>
+                        <!-- ##### BOTON DE ACEPTAR ##### -->
+                        <a href="#" class="btn essence-btn">HACER PEDIDO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### FIN DETALLE DE FACTURA ##### -->
+
+   <!-- PIE DE PAGINA -->
+    <footer class="footer_area clearfix" style="background-color: #6B111A;">
+        <div class="container" >
+            <div class="row">
+                <!-- UBICACION DE LA INFORMACION -->
+                <div class="col-12 col-md-6">
+                    <div class="single_widget_area d-flex mb-30">
+                        <!-- LOGO -->
+                        <div class="footer-logo mr-50">
+                            <a class="nav-brand" href="index.html" ><h2 style=" color: #ffffff;">MARKETIME</h2></a>
+                        </div>
+                        <!-- ENLACE CON LOGICA DEL MENU -->
+                        <div class="footer_menu">
+                            <ul>
+                                <li><a href="aseo.html">Catalogo</a></li>                              
+                                <li><a href="contact.html">Contactenos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- INFORMACION DE PILITICAS DE LA ORGANIZACION -->
+                <div class="col-12 col-md-6">
+                    <div class="single_widget_area mb-30">
+                        <ul class="footer_widget_menu">
+                            <li><a href="#">Estado del pedido</a></li>
+                            <li><a href="#">Envio y entrega</a></li>
+                            <li><a href="#">Politica de privacidad</a></li>
+                            <li><a href="#">Opciones de pago</a></li>
+                            <li><a href="#">Guias</a></li>
+                            <li><a href="#">Terminos de uso</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+          
+                <!-- ENLACE CON REDES SOCILES -->
+                <div class="col-12 col-md-6">
+                    <div class="single_widget_area">
+                        <div class="footer_social_area">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </footer>
+    <!-- ##### FIN DEL PIE DE PAGINA ##### -->
+
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Classy Nav js -->
+    <script src="js/classy-nav.min.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+    <!-- Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script>
+    <script src="js/map-active.js"></script>
+</body>
+
+</html>
